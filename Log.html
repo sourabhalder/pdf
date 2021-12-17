@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function() {
+    document.getElementById("download")
+    .addEventListener("click", () => {
+    const invoice = this.document.getElementById("invoice");
+    console.log(invoice);
+    console.log(window);
+    var opt = { margin: 1,
+    filename: 'myfile.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } };
+    html2pdf().from(invoice).set(opt).save();
+    }) }
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body><fieldset><center>
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+     <div class="row"> <div class="col-md-12 text-right mb-3">
+ <button class="btn btn-primary" id="download"> download pdf</button> </div>
+     <div class="col-md-12"> <div class="card" id="invoice">
+ <div class="card-header bg-transparent header-elements-inline">
+ <h6 class="card-title text-primary">Powerd by Sourabhalder</h6> </div>
+           <div class="card-body"> <div class="row">
+ <div class="col-sm-6"><div class="mb-4 pull-left"> </div> </div>
+     <div class="col-sm-6"> <div class="mb-4 ">
+        <div class="text-sm-right">
+      <h4 class="invoice-color mb-2 mt-md-2"> E-Certified <Invoice#BBB1243></h4>  </div>  </div> </div> </div>
+              <div class="d-md-flex flex-md-wrap">
+     <div class="mb-4 mb-md-2 text-left"> <span class="text-muted">Certificked To:</span> </div>
+         <div class="mb-2 ml-auto"> <span class="text-muted">Computer Basic Certificked Details:</span>
+     <div class="d-flex flex-wrap wmin-md-400">
+         
+         
+                                    <form>
+     <h4>Name:<input type="name" placeholder="name"> <br/>
+     Parsent:<input type="tel" placeholder="parsent"> <br/>
+     Great:<input type="text" placeholder="great"> <br/>
+     <input type="button" value="submit">
+                                    </form>
+         
+         
+                                </div> </div> </div>
+ <div class="card-body"> <div class="d-md-flex flex-md-wrap">
+    <div class="pt-2 mb-3 wmin-md-400 ml-auto">
+    <h6 class="mb-3 text-left">Thank You visit Again</h6> </div>
+ <div class="text-right mt-3"> <button type="button" class="btn btn-primary"><b><i class="fa fa-paper-plane-o mr-1"> </i> </b> free E-certificked</button> </div> </div> </div>
+ </center> </fieldset>
+</body>
+</html>
